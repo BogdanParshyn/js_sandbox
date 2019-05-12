@@ -12,7 +12,19 @@ function removeKeys(obj, arr){
 } 
 // ========================================================================================= //
 //Часть 2:
+function clearNumbers(arr){
 
+    for(var i = arr.length - 1; i >= 0; i -= 1) {
+        
+        for(var j = arr[i].length - 1; j >= 0; j -= 1) {
+        
+            typeof arr[i][j] !== 'number' ? arr[i].splice(j, 1) : arr;
+        }
+
+        arr[i].length == 0 ? arr.splice(i, 1) : arr; 
+    }
+    return arr;
+}
 // ========================================================================================= //
 //Часть 3:
 
