@@ -47,5 +47,21 @@ function join(...arg) {
         typeof arg[i] == 'object' ? arg : arg.splice(i, 1); 
     }
     
+    for(var i = 1; i < arr.length; i++) {
+        var el = arg[i];
+        for(var j = 0; i < arr[j].length; i++) { 
+            if(el[j] in arg[0]) {
+                arsss = arg[0]
+            }
+
+        }
     return arg;
+}
+
+
+for(var i = 0; i < arr.length; i++) {
+    var el = arr[i]; // el это повторяющийся ключ объекта в массиве, который мы потом удаляем.
+    if(el in obj) {
+        delete obj[el];
+    }
 }

@@ -227,6 +227,7 @@ function join(...arg) {
         typeof arg[i] == 'object' ? arg : arg.splice(i, 1); 
     }
     
+    for(arg[i].)
     return arg;
 
 }
