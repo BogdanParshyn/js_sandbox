@@ -40,4 +40,13 @@ function reverse() {
 
 // ========================================================================================= //
 //Часть 4:
+function join(...arg) {
+    //var el;
+    for(var i = arg.length - 1; i >= 0; i -= 1) {
+        
+        typeof arg[i] == 'object' ? arg : arg.splice(i, 1); 
+    }
+    
+    return arg;
 
+}
