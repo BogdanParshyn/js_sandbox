@@ -41,7 +41,7 @@ function reverse() {
 // ========================================================================================= //
 //Часть 4:
 function join(...arg) {
-    //var el;
+    
     for(var i = arg.length - 1; i >= 0; i -= 1) {
         
         typeof arg[i] == 'object' ? arg : arg.splice(i, 1); 
@@ -56,12 +56,6 @@ function join(...arg) {
 
         }
     return arg;
-}
-
-
-for(var i = 0; i < arr.length; i++) {
-    var el = arr[i]; // el это повторяющийся ключ объекта в массиве, который мы потом удаляем.
-    if(el in obj) {
-        delete obj[el];
     }
 }
+// НЕ УСПЕЛ ДОДЕЛАТЬ.
