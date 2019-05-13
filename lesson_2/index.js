@@ -27,7 +27,16 @@ function clearNumbers(arr){
 }
 // ========================================================================================= //
 //Часть 3:
+function reverse() {
+    var arr = [];
+    
+    for(var i = 0; i < arguments.length; i += 1){
 
+        arr[i] = arguments[i];
+        arr[i] = arr[i].split("").reverse().join("");
+    }
+    return arr.reverse() ;
+}
 
 // ========================================================================================= //
 //Часть 4:

@@ -128,7 +128,7 @@ function clearNumbers(arr){
     }
     return arr;
 }
-console.log(clearNumbers( [[1, "a", () => {}], [{}, 2, 3], [null, -3, 'q'], [null, -3, 'q'], [1, "a", () => {}], [1, "a", Infinity]]) );
+//console.log(clearNumbers( [[1, "a", () => {}], [{}, 2, 3], [null, -3, 'q'], [null, -3, 'q'], [1, "a", () => {}], [1, "a", Infinity]]) );
 
 // ========================================================================================= //
 // ========================================================================================= //
@@ -136,8 +136,72 @@ console.log(clearNumbers( [[1, "a", () => {}], [{}, 2, 3], [null, -3, 'q'], [nul
 /*
 Часть 3:
 Написать функцию reverse, которая принимает бесконечное количество аргументов, 
-где каждый и них - строка. Функция должна вернуть массив строк в обратном порядке, 
+где каждый из них - строка. Функция должна вернуть массив строк в обратном порядке, 
 где каждая строка - будет задом-наперед, Например:
 reverse('123', '456')
 Вернет ['654', '321']
 */
+
+
+function reverse() {
+
+    var arr = [];
+    
+
+    for(var i = 0; i < arguments.length; i += 1){
+    
+        arr[i] = arguments[i];
+        arr[i] = arr[i].split("").reverse().join("");
+        //console.log (arguments.length);
+
+        //console.log (arguments[i] ); // 5, обновленный x
+        //console.log (arr );
+    }
+    return arr.reverse() ;
+}
+
+//console.log(reverse('123', '456'));
+
+console.log("=======================================================================");
+var arrS = ['123', '234', 'kf3'];
+arrS[0].revers;
+//console.log(arrS);
+arrS[1] = arrS[1].split("").reverse().join("");
+//console.log(arrS[1]);
+
+//console.log(arrS);
+//console.log("=======================================================================");
+
+
+
+
+function reverseStr(str) {
+
+    var newStr = '', i;
+
+    for (i = str.length - 1; i >= 0; i--) {
+        console.log(newStr + 'n');
+        newStr += str.charAt(i);
+        console.log(newStr + 's');
+
+    }
+
+    return newStr;
+
+}
+
+//console.log(reverseStr('123'));
+
+console.log("Тестируем 3-е задание:=======================================================================");
+function reverse() {
+    var arr = [];
+    
+    for(var i = 0; i < arguments.length; i += 1){
+
+        arr[i] = arguments[i];
+        arr[i] = arr[i].split("").reverse().join("");
+    }
+    return arr.reverse() ;
+}
+
+console.log(reverse('чиворднаскелА', 'надгоБ', 'нишраП'));
