@@ -8,7 +8,7 @@
 removeKeys({ a: 1, b: [], c: '' }, ['a', 'c'])
 Вернёт { b: [] }
 */
-
+console.log('Задание 1');
 function removeKeys(obj, arr){
     
     for(var i = 0; i < arr.length; i++) {
@@ -20,8 +20,8 @@ function removeKeys(obj, arr){
     return obj;
 } 
    
-//console.log( removeKeys({ a: 1, b: [], c: '' }, ['a', 'g', 'c']) );
-
+console.log( removeKeys({ a: 1, b: [], c: '' }, ['a', 'g', 'c']) );
+console.log('Задание 1');
 //delete obj.a;
 //console.log(obj);
 
@@ -94,7 +94,7 @@ var b = -4;
 //arr.splice(2, 1);
 
 ////console.log(typeof arr[1][1]);
-
+console.log('Задание 2');
 function clearNumbers(arr){
     for(var i = arr.length - 1; i >= 0; i -= 1) {
 
@@ -114,6 +114,7 @@ function clearNumbers(arr){
 }
 //console.log(arr);
 //console.log(clearNumbers( [[1, "a", () => {}], [{}, 2, 3], [null, -3, 'q']]) );
+console.log('Задание 2');
 
 // Оптимизируем код:
 function clearNumbers(arr){
@@ -128,8 +129,8 @@ function clearNumbers(arr){
     }
     return arr;
 }
-//console.log(clearNumbers( [[1, "a", () => {}], [{}, 2, 3], [null, -3, 'q'], [null, -3, 'q'], [1, "a", () => {}], [1, "a", Infinity]]) );
-
+console.log(clearNumbers( [[1, "a", () => {}], [{}, 2, 3], [null, -3, 'q'], [null, -3, 'q'], [1, "a", () => {}], [1, "a", Infinity]]) );
+console.log('Задание 2');
 // ========================================================================================= //
 // ========================================================================================= //
 // ========================================================================================= //
@@ -227,12 +228,58 @@ function join(...arg) {
         typeof arg[i] == 'object' ? arg : arg.splice(i, 1); 
     }
     
-    for(arg[i].)
+    //for(arg[i].)
     return arg;
 
 }
 //console.log( join(0, { name: 1}, '2', { n: 3}, {j: 4} ) );
 
-console.log( join(3, { name: 'K', k: [3], j: {} }, 'Hello', { n: 3, k: [4] }, { n: 7, name: 'ent', j: 13 }) );
+//console.log( join(3, { name: 'K', k: [3], j: {} }, 'Hello', { n: 3, k: [4] }, { n: 7, name: 'ent', j: 13 }) );
 
 //console.log(typeof{ name: 'K', k: [3], j: {} });
+
+/*
+function join(...arg) {
+    
+    for(var i = arg.length - 1; i >= 0; i -= 1) {
+        
+        typeof arg[i] == 'object' ? arg : arg.splice(i, 1); 
+    }
+    
+    for(var k = 1; k < arg.length; k += 1) {
+        var el = arg[i];
+        var firstObj = arg[0];
+        for(var j = 0; i < arg[j].length; i++) { 
+            if(el[j] in firstObj) {
+                
+            }
+
+        }
+    return arg;
+    }
+}
+
+console.log( join(3, { name: 'K', k: [3], j: {} }, 'Hello', { n: 3, k: [4] }, { n: 7, name: 'ent', j: 13 }) );
+*/
+var arg = [{ name: 'K', k: [3], j: {} },
+           { n: 3, k: [4] }, 
+           { n: 7, name: 'ent', j: 13 }];
+
+    var firstObj = arg[0];           
+    console.log(firstObj);
+for(var k = 1; k < arg.length; k += 1) {
+
+    var otherObj = arg[k];
+    console.log(otherObj);
+    //console.log(arg.length);
+    console.log(otherObj['otherObj[0]']);
+    
+    for(var j = 0; j < arg[j].length; j++) { 
+        if(otherObj[j] in firstObj) {
+            console.log(otherObj[j]);
+        } else {
+            console.log("no");
+        }
+        console.log(otherObj[j]);
+    }
+}    

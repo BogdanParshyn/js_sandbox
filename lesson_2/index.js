@@ -35,7 +35,7 @@ function reverse() {
         arr[i] = arguments[i];
         arr[i] = arr[i].split("").reverse().join("");
     }
-    return arr.reverse() ;
+    return arr.reverse();
 }
 
 // ========================================================================================= //
