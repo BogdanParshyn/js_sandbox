@@ -1,10 +1,18 @@
 "use strict";
 //Часть 1:
+/*Часть 1:
+Создайте функцию “makeGreetings”, которая принимает один целочисленный аргумент - возраст. Она должна вернуть строку приветствие:
+“Мой возраст 21 год”(без кавычек), где “21” - значение аргумента (во время проверки оно может быть любым), а окончание “год”, должно зависеть от цифры возраста, например:
+21 год, 22 года, 24 года, 25 лет, 19 лет, 20 лет.*/
 
 function makeGreetings(age){
+    
+    var age = String(age);
+    //console.log(age);
+    //console.log(typeof age);
     var i = age.length;
     var t = "Мой возраст " + age; 
-    
+    //console.log(age[i-1]);
     if(age[i-1] == 1 && age[i-2] != 1){
         return t + ' год';
     } else if (1 < age[i-1] && age[i-1] < 5 && age[i-2] != 1){
@@ -13,12 +21,52 @@ function makeGreetings(age){
         return t + ' лет';
     }
 }
-
-//console.log(makeGreetings(''));
+/*
+console.log(makeGreetings(0));
+console.log(makeGreetings(1));
+console.log(makeGreetings(2));
+console.log(makeGreetings(3));
+console.log(makeGreetings(4));
+console.log(makeGreetings(5));
+console.log(makeGreetings(6));
+console.log(makeGreetings(7));
+console.log(makeGreetings(8));
+console.log(makeGreetings(9));
+console.log(makeGreetings(10));
+console.log(makeGreetings(11));
+console.log(makeGreetings(12));
+console.log(makeGreetings(13));
+console.log(makeGreetings(14));
+console.log(makeGreetings(15));
+console.log(makeGreetings(16));
+console.log(makeGreetings(17));
+console.log(makeGreetings(18));
+console.log(makeGreetings(19));
+console.log(makeGreetings(20));
+console.log(makeGreetings(21));
+console.log(makeGreetings(22));
+console.log(makeGreetings(23));
+console.log(makeGreetings(24));
+console.log(makeGreetings(25));
+console.log(makeGreetings(26));
+console.log(makeGreetings(27));
+console.log(makeGreetings(28));
+console.log(makeGreetings(29));
+console.log(makeGreetings(101));
+console.log(makeGreetings(110));
+console.log(makeGreetings(111));
+console.log(makeGreetings(1111));
+console.log(makeGreetings(1121));
+*/
 // ========================================================================================= //
 
 //Часть 2:
-
+/*Написать функцию splitArray которая первым аргументом принимает массив чисел, а вторым количество 
+элементов в подмассивах. Функция должна вернуть массив массивов. Например: 
+splitArray([1, 4, 5, 6, 2], 2)
+вернет [[1, 4], [5, 6], [2]].
+Если количества элементов недостаточно - последний подмассив может содержать меньшее количество 
+элементов.*/
 
 function splitArray(arr, n) {
     var newArr = Array( Math.ceil(arr.length / n) );
@@ -56,14 +104,14 @@ function add(a) {
 }
 console.log( add(2)(3)(5) );
 */
-/*
+
 function add(a) {
     return function add(b) {
         return a + b;  
     }
 }
-console.log( add(4)(-1) );
-*/
+//console.log( add(4)(-1) );
+
 /*
 function add(a) {
     return function add(b) {
@@ -88,12 +136,12 @@ var res = transformData([
 
 // res: { johnny778: 'John Doe', alexgerman: 'Alex' }
 */
-
+/*
 var res = transformData([
  { login: 'johnny778', firstName: 'John', lastName: 'Doe', mark: 10 },
  { login: 'superman', firstName: 'Mark', lastName: 'Coulson', mark: 3 },
  { login: 'alexgerman', firstName: 'Alex', lastName: '', mark: 7 },
-]);
+]);*/
 /*
 function transformData(res) {
     var object = {};
@@ -129,7 +177,14 @@ function transformData(res) {
             object[key] = s;
         }
     }  
-    return console.log(object);
+    return object;
 }
 
+var res = transformData([
+    { login: 'johnny778', firstName: 'John', lastName: 'Doe', mark: 10 },
+    { login: 'superman', firstName: 'Mark', lastName: 'Coulson', mark: 3 },
+    { login: 'alexgerman', firstName: 'Alex', lastName: '', mark: 7 },
+   ]);
+   
+console.log(res);
 

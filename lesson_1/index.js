@@ -1,9 +1,11 @@
 "use strict";
 //Часть 1:
 function makeGreetings(age){
+    
+    var age = String(age);
     var i = age.length;
     var t = "Мой возраст " + age; 
-    
+ 
     if(age[i-1] == 1 && age[i-2] != 1){
         return t + ' год';
     } else if (1 < age[i-1] && age[i-1] < 5 && age[i-2] != 1){
