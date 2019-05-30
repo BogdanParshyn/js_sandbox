@@ -4,11 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HomeWork_lesson_3</title>
+    <title>HomeWork_lesson_5</title>
+
+    
 </head>
 <body>
     
-    <script src="draftHW.1.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(241, 140, 72);
+        }
+                
+        #div {
+            width: 200px;
+            height: 250px;
+                  
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+
+            margin: auto;
+            display: none;
+            position: absolute;
+            
+            border: 10px;
+            border-radius: 10px;
+            
+            background-color: #55af6b;
+        }
+
+        #Text {
+            padding: 5px;
+        }
+   
+        #OpenButton {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            
+            display: inline-block;
+
+            text-align: center;
+            border-radius: 10px;
+            border-color: coral;
+            padding: 30px;
+            color: #f6f5fa;
+            background-color: #55af6b;
+        }
+
+        #Hide{
+            width: 50px;
+            height: 50px;
+            float:right;
+            padding: 10px, 10px, 10px, 10px;
+        }
+
+    </style>
+        
+    <div id='div'>
+            <div>
+                <img src="Hide.png" id="Hide">
+            </div>
+            <div id="Text"> 
+                Необходимо создать скрытый div и кнопку “Open”, 
+                по нажатию на которую необходимо показать этот div по центру страницы, 
+                он должен быть визуально отличим и содержать какое-то сообщение, 
+                а также иконку крестика в правом верхнем углу, по нажатию на которую этот 
+                div скрывается.
+              </div>   
+    </div>
+
+    <button id="OpenButton">Open</button>
+
+    <script src="index.js"></script>
 
 </body>
 </html>
