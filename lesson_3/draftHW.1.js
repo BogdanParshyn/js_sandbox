@@ -14,32 +14,44 @@ AlevelStudent({ name: 'Ivan', age: 19, marks: [1, 2, 3, 4, 5] });
 У класса AlevelStudent должен быть метод averageMark, который возвращает среднее значение из 
 вашего массива оценок
 
-
+*/
 class Human{
-    name: "Ivan",
-    age: "19",
-
-
+  constructor({name, age}){
+    this.name = name;
+    this.age = age;
+  }
+/*
     sayHello() {
-        console.log("Hello,my name is " + this.name + ", I am " + this.age + " years old");
+        console.log("Hello, my name is " + this.name + ", I am " + this.age + " years old");
+    }
+*/
+    sayHello() {
+        console.log(`Hello, my name is ${this.name}, I am ${this.age} years old`);
     }
 };
 
-Human();
-*/
+let man = new Human({ name: 'ivan', age: 19 });
+man.sayHello();
 
-
-class User {
-
-  constructor(name) {
-    this.name = name;
+class AlevelStudent extends Human{
+  constructor({name, age, marks}){
+    super({name, age});
+    this.marks = marks;
   }
 
-  sayHi() {
-    alert(this.name);
+  averageMark() {
+    if( Array.isArray(this.marks) ) {
+      
+    }
+
+
+    let averageItem = this.marks.reduce(function(sum, item) {
+      return sum + item;
+    }, 0);
   }
 
-}
+};
 
-let user = new User("Вася");
-user.sayHi(); // Вася
+let stud = new AlevelStudent( {marks: [1, 2, 3, 4, 5] });
+stud.sayHello();
+

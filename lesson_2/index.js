@@ -15,7 +15,7 @@ function removeKeys(obj, arr){
 function clearNumbers(arr){
 
     for(var i = arr.length - 1; i >= 0; i -= 1) {
-        
+
         for(var j = arr[i].length - 1; j >= 0; j -= 1) {
         
             typeof arr[i][j] !== 'number' ? arr[i].splice(j, 1) : arr;
@@ -28,6 +28,7 @@ function clearNumbers(arr){
 // ========================================================================================= //
 //Часть 3:
 function reverse() {
+
     var arr = [];
     
     for(var i = 0; i < arguments.length; i += 1){
@@ -35,9 +36,8 @@ function reverse() {
         arr[i] = arguments[i];
         arr[i] = arr[i].split("").reverse().join("");
     }
-    return arr.reverse();
+    return arr;
 }
-
 // ========================================================================================= //
 //Часть 4:
 function join(...arg) {

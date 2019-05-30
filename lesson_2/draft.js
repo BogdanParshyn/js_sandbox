@@ -8,7 +8,7 @@
 removeKeys({ a: 1, b: [], c: '' }, ['a', 'c'])
 Вернёт { b: [] }
 */
-console.log('Задание 1');
+
 function removeKeys(obj, arr){
     
     for(var i = 0; i < arr.length; i++) {
@@ -20,8 +20,8 @@ function removeKeys(obj, arr){
     return obj;
 } 
    
-console.log( removeKeys({ a: 1, b: [], c: '' }, ['a', 'g', 'c']) );
-console.log('Задание 1');
+//console.log( removeKeys({ a: 1, b: [], c: '' }, ['a', 'g', 'c']) );
+
 //delete obj.a;
 //console.log(obj);
 
@@ -94,7 +94,7 @@ var b = -4;
 //arr.splice(2, 1);
 
 ////console.log(typeof arr[1][1]);
-console.log('Задание 2');
+//console.log('Задание 2');
 function clearNumbers(arr){
     for(var i = arr.length - 1; i >= 0; i -= 1) {
 
@@ -114,7 +114,7 @@ function clearNumbers(arr){
 }
 //console.log(arr);
 //console.log(clearNumbers( [[1, "a", () => {}], [{}, 2, 3], [null, -3, 'q']]) );
-console.log('Задание 2');
+
 
 // Оптимизируем код:
 function clearNumbers(arr){
@@ -129,8 +129,8 @@ function clearNumbers(arr){
     }
     return arr;
 }
-console.log(clearNumbers( [[1, "a", () => {}], [{}, 2, 3], [null, -3, 'q'], [null, -3, 'q'], [1, "a", () => {}], [1, "a", Infinity]]) );
-console.log('Задание 2');
+//console.log(clearNumbers( [[1, "a", () => {}], [{}, 2, 3], [null, -3, 'q']]) );
+
 // ========================================================================================= //
 // ========================================================================================= //
 // ========================================================================================= //
@@ -158,16 +158,16 @@ function reverse() {
         //console.log (arguments[i] ); // 5, обновленный x
         //console.log (arr );
     }
-    return arr.reverse() ;
+    return arr.reverse();
 }
 
-//console.log(reverse('123', '456'));
+//console.log(reverse('2123', '456'));
 
-console.log("=======================================================================");
-var arrS = ['123', '234', 'kf3'];
-arrS[0].revers;
+//console.log("=======================================================================");
+//var arrS = ['123', '234', 'kf3'];
+//arrS[0].revers;
 //console.log(arrS);
-arrS[1] = arrS[1].split("").reverse().join("");
+//arrS[1] = arrS[1].split("").reverse().join("");
 //console.log(arrS[1]);
 
 //console.log(arrS);
@@ -193,7 +193,7 @@ function reverseStr(str) {
 
 //console.log(reverseStr('123'));
 
-console.log("Тестируем 3-е задание:=======================================================================");
+//console.log("Тестируем 3-е задание:=======================================================================");
 function reverse() {
     var arr = [];
     
@@ -261,7 +261,7 @@ function join(...arg) {
 
 console.log( join(3, { name: 'K', k: [3], j: {} }, 'Hello', { n: 3, k: [4] }, { n: 7, name: 'ent', j: 13 }) );
 */
-var arg = [{ name: 'K', k: [3], j: {} },
+/*var arg = [{ name: 'K', k: [3], j: {} },
            { n: 3, k: [4] }, 
            { n: 7, name: 'ent', j: 13 }];
 
@@ -283,3 +283,36 @@ for(var k = 1; k < arg.length; k += 1) {
         console.log(otherObj[j]);
     }
 }    
+*/
+
+function join(...arg) {
+    
+    for(var i = arg.length - 1; i >= 0; i -= 1) {
+        
+        typeof arg[i] == 'object' ? arg : arg.splice(i, 1); 
+    }
+
+    console.log(arg);
+    console.log(arg[0]);
+    var firstObj = arg[0];
+    console.log(firstObj);
+    console.log(firstObj[key]);
+
+    for(var j = 1; j < arg.length; j++) {
+        var otherObj = arg[j];
+        
+        for(var k = 0; k < otherObj.length; k++) { 
+            if(otherObj[k] in firstObj) {
+                console.log(jw);
+            }
+
+        }
+    return arg;
+    }
+    return arg;
+}
+join(3, 
+    { name: 'K', k: [3], j: {} }, 
+    'Hello', 
+    { n: 3, k: [4] }, 
+    { n: 7, name: 'ent', j: 13 });
