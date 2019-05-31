@@ -1,0 +1,4 @@
+{
+    "name": "value",
+    "array":["elem1", 3, {}, [], false, true]
+}
