@@ -14,3 +14,5 @@ window.addEventListener('change', (event) => console.log('move', event));
 iT.addEventListener('change', (event) =>{
     readText.innerHTML=camelCase(iT.value);
 });
+
+console.log('Получилось!')
