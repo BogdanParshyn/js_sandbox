@@ -116,11 +116,85 @@ class Calculator {
     }
   
     getResult() {
-        return this.result;
-        //return console.log(this.result);
+        return this.result;//, console.log(this.result);
     }
 }
 const calculator = new Calculator().add(3).reset().sub(3).mul(2).div(3).pow(4).sqrt().getResult();
+
+// ========================================================================= //
+
+class Point{
+    constructor(x, y){
+        this.x = x;
+        this.y = y;
+    }
+
+    toString(){
+        //return `Point[${this.x} ${this.y}]`;
+        return console.log(`Point[${this.x} ${this.y}]`);
+    }
+
+    set(x, y){
+        this.x = x;
+        this.y = y;
+        return console.log(this); //return this;
+    }
+
+    getX(){
+        //return this.x;
+        return console.log(this.x);
+    }
+
+    getY(){
+        //return this.y;
+        return console.log(this.y);
+    }
+}
+
+let ss = new Point("x", "y");
+ss.toString();
+ss.set(32, 2);
+ss.getX();
+ss.getY();
+
+/*
+class Line{
+    constructor(point1, point2){
+        this.point1 = point1;
+        this.point2 = point2;
+    }
+    toString(){
+        return `Line(${this.point1.toString()} - ${this.point2.toString()})`;
+    }
+
+    length(){
+        return Math.sqrt(Math.pow( ( this.point2.getX()  - this.point1.getX() ), 2) + 
+                        Math.pow( ( this.point2.getY()  - this.point1.getY() ), 2) );
+    }
+}
+ */
+/*
+class WeightedPoint extends Point{
+    constructor(x, y, weight){
+        super(x, y);
+        this.weight = weight;
+    }
+
+    toString(){
+        return `${this.weight}&${super.toString()}`;
+    }
+
+    set(x, y, weight){
+        super.set(x, y);
+        this.weight = weight;
+        return this;
+    }
+
+    getWeight(){
+        return this.weight;
+    }
+}
+*/
 
 /*
 Part 4*:Создать класс CalculatorExtended, который наследует класс Calculator из части 2.
@@ -140,7 +214,7 @@ calc.reset().add(4).mul(2).mul(2).toString() // (0 + 4) * 2 * 2 = 16
 
 class CalculatorExtended extends Calculator {
   constructor(num, storage = '') {
-      super(num)
+      super(num);
       this._storage = storage;
   }
   reset() {
@@ -148,6 +222,7 @@ class CalculatorExtended extends Calculator {
       this._storage = 0;
       return this;
   }
+  /*
   add(num) {
       if (typeof num !== 'number') num = 0;
       this._result += num;
@@ -192,8 +267,10 @@ class CalculatorExtended extends Calculator {
       this._storage = String.fromCharCode(8730) + '(' + this._storage + ')'
       return this;
   }
+  */
   toString() {
-      return console.log(this._storage + ' = ' + this._result);
+      return console.log(this._storage + ' = ' + this._result),
+      console.log('gre');
   }
 }
 const calc2 = new CalculatorExtended();
