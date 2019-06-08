@@ -99,3 +99,92 @@ const calculator = new Calculator().add(3).reset().sub(3).mul(2).div(3).pow(4).s
 
 // ========================================================================================= //
 //Часть 4:
+
+class CalculatorExtended extends Calculator{
+  constructor(num, result, str, n) {
+      super(num, result);
+      this.str = str;
+      this.n = n;
+  }
+  reset() { 
+      this.result = 0;
+      this.str = 0;
+      this.n = 0; 
+      return this;  
+  }
+
+  add(num) { 
+      if (typeof num === 'number'){
+          this.result += num; 
+          this.str = this.str + ' + ' + num;
+          this.n = 1; 
+          return this; 
+      }
+  }
+
+  sub(num) { 
+      if (typeof num === 'number'){
+          this.result -= num; 
+          this.str = this.str + ' - ' + num;
+          this.n = 1; 
+          return this;  
+      }
+  }
+
+  mul(num) { 
+      if (typeof num === 'number'){
+          this.result *= num;
+          
+          if(this.n == 1) {
+              this.str = '(' + this.str + ') * ' + num;
+          } else {
+          this.str = this.str + ' * ' + num;
+          }
+
+          this.n = 0;
+          return this;  
+      }
+  }
+
+  div(num) { 
+      if (typeof num === 'number'){
+          this.result /= num;
+          
+          if(this.n == 1) {
+              this.str = '(' + this.str + ') / ' + num;
+          } else {
+          this.str = this.str + ' / ' + num;
+          }
+
+          this.n = 0;
+          return this;  
+      }
+  }
+
+  pow(num) { 
+      if (typeof num === 'number'){
+          this.result = Math.pow(this.result, num);
+          this.str = '(' + this.str + ') ^ ' + num;
+          this.n = 0;
+          return this; 
+      }
+  }
+
+  sqrt() { 
+      this.result = Math.sqrt(this.result);
+      this.str = '√(' + this.str + ')';
+      this.n = 0;
+      return this;  
+  }
+
+  getResult() {
+      return this.result;
+  }
+
+  toString() {
+      return this.str + ' = ' + this.result;
+  }
+}
+
+
+const calc = new CalculatorExtended();
