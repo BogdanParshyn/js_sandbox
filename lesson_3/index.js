@@ -159,6 +159,7 @@ class WeightedPoint extends Point{
 		return this.weight;
 	}
 }
+
 // ========================================================================================= //
 //Часть 4:
 
@@ -247,6 +248,5 @@ class CalculatorExtended extends Calculator{
       return this.str + ' = ' + this.result;
   }
 }
-
 
 const calc = new CalculatorExtended();
