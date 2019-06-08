@@ -96,7 +96,69 @@ const calculator = new Calculator().add(3).reset().sub(3).mul(2).div(3).pow(4).s
 // ========================================================================================= //
 //Часть 3:
                   
+class Point{
+	constructor(x, y){
+		this.x = x;
+		this.y = y;
+    }
+    
+	toString(){
+	    return `Point[${this.x} ${this.y}]`;
+    }
+    
+	set(x, y){
+		this.x = x;
+		this.y = y;
+    }
+    
+	getX(){
+		return this.x;
+    }
+    
+	getY(){
+		return this.y;
+	}
+}
 
+class Line{
+	constructor(point1, point2){
+		this.point1 = point1;
+		this.point2 = point2;
+    }
+    
+	toString(){
+		return `Line(${this.point1} - ${this.point2})`;
+    }
+    
+	length(){
+        return Math.sqrt(
+            Math.pow((this.point2.x - this.point1.x), 2) 
+            + 
+            Math.pow((this.point2.y - this.point1.y), 2)
+        )
+	}
+}
+
+class WeightedPoint extends Point{
+	constructor(x, y, weight){
+		super(x, y);
+        this.weight = weight;
+
+	}
+	toString(){
+		return `${this.weight}&${super.toString()}`;
+    }
+   
+	set(x, y, weight){
+		this.x = x;
+		this.y = y;
+		this.weight = weight;
+    }
+
+	getWeight(){
+		return this.weight;
+	}
+}
 // ========================================================================================= //
 //Часть 4:
 
