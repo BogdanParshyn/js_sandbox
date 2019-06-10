@@ -116,11 +116,82 @@ class Calculator {
     }
   
     getResult() {
-        return this.result;
-        //return console.log(this.result);
+        return this.result;//, console.log(this.result);
     }
 }
 const calculator = new Calculator().add(3).reset().sub(3).mul(2).div(3).pow(4).sqrt().getResult();
+
+// ========================================================================= //
+
+class Point{
+	constructor(x, y){
+		this.x = x;
+		this.y = y;
+    }
+    
+	toString(){
+	    return `Point[${this.x} ${this.y}]`;
+    }
+    
+	set(x, y){
+		this.x = x;
+		this.y = y;
+    }
+    
+	getX(){
+		return this.x;
+    }
+    
+	getY(){
+		return this.y;
+	}
+}
+
+class Line{
+	constructor(point1, point2){
+		this.point1 = point1;
+		this.point2 = point2;
+    }
+    
+	toString(){
+		return `Line(${this.point1} - ${this.point2})`;
+    }
+    
+	length(){
+        return Math.sqrt(
+            Math.pow((this.point2.x - this.point1.x), 2) 
+            + 
+            Math.pow((this.point2.y - this.point1.y), 2)
+        )
+	}
+}
+
+class WeightedPoint extends Point{
+	constructor(x, y, weight){
+		super(x, y);
+        this.weight = weight;
+
+	}
+	toString(){
+		return `${this.weight}&${super.toString()}`;
+    }
+   
+	set(x, y, weight){
+		this.x = x;
+		this.y = y;
+		this.weight = weight;
+    }
+
+	getWeight(){
+		return this.weight;
+	}
+}
+
+const p1 = new Point(2, 3.4);
+const p2 = new WeightedPoint(-1, 0.5, 3);
+const line = new Line(p1, p2);
+console.log(line.toString()); // "Line(Point[2 3.4] - 3&Point[-1 0.5])"
+console.log(line.length()); // 4.172529209005013
 
 /*
 Part 4*:Создать класс CalculatorExtended, который наследует класс Calculator из части 2.
@@ -138,62 +209,101 @@ calc.reset().add(4).sqrt().toString() // √(0 + 4) = 2
 calc.reset().add(4).mul(2).mul(2).toString() // (0 + 4) * 2 * 2 = 16
 */
 
-class CalculatorExtended extends Calculator {
-  constructor(num, storage = '') {
-      super(num)
-      this._storage = storage;
-  }
-  reset() {
-      this._result = 0;
-      this._storage = 0;
-      return this;
-  }
-  add(num) {
-      if (typeof num !== 'number') num = 0;
-      this._result += num;
-      this._storage = this._storage + ' + ' + num;
-      return this;
-  }
-  sub(num) {
-      if (typeof num !== 'number') num = 0;
-      this._result -= num;
-      this._storage = this._storage + ' - ' + num;
-      return this;
-  }
-  mul(num) {
-      if (typeof num !== 'number') num = 1;
-      this._result *= num;
-      if (this._result === 0 || this._storage.split('')[this._storage.length - 3] === '*' || this._storage.split('')[this._storage.length - 3] === '/') {
-          this._storage = this._storage + ' * ' + num;
-      } else {
-          this._storage = '(' + this._storage + ') * ' + num;
-      }
-      return this;
-  }
-  div(num) {
-      if (typeof num !== 'number') num = 1;
-      this._result /= num;
-      if (this._result === 0 || this._storage.split('')[this._storage.length - 3] === '*' || this._storage.split('')[this._storage.length - 3] === '/') {
-          this._storage = this._storage + ' / ' + num;
-      } else {
-          this._storage = '(' + this._storage + ') / ' + num;
-      }
+class CalculatorExtended extends Calculator{
+    constructor(num, result, str, n) {
+        super(num, result);
+        this.str = str;
+        this.n = n;
+    }
+    reset() { 
+        this.result = 0;
+        this.str = 0;
+        this.n = 0; 
+        return this;  
+    }
 
-      return this;
-  }
-  pow(num) {
-      if (typeof num !== 'number') num = 1;
-      this._result = Math.pow(this._result, num);
-      this._storage = '(' + this._storage + ') ^ ' + num;
-      return this;
-  }
-  sqrt() {
-      this._result = Math.sqrt(this._result);
-      this._storage = String.fromCharCode(8730) + '(' + this._storage + ')'
-      return this;
-  }
-  toString() {
-      return console.log(this._storage + ' = ' + this._result);
-  }
+    add(num) { 
+        if (typeof num === 'number'){
+            this.result += num; 
+            this.str = this.str + ' + ' + num;
+            this.n = 1; 
+            return this; 
+        }
+    }
+
+    sub(num) { 
+        if (typeof num === 'number'){
+            this.result -= num; 
+            this.str = this.str + ' - ' + num;
+            this.n = 1; 
+            return this;  
+        }
+    }
+
+    mul(num) { 
+        if (typeof num === 'number'){
+            this.result *= num;
+            
+            if(this.n == 1) {
+                this.str = '(' + this.str + ') * ' + num;
+            } else {
+            this.str = this.str + ' * ' + num;
+            }
+
+            this.n = 0;
+            return this;  
+        }
+    }
+
+    div(num) { 
+        if (typeof num === 'number'){
+            this.result /= num;
+            
+            if(this.n == 1) {
+                this.str = '(' + this.str + ') / ' + num;
+            } else {
+            this.str = this.str + ' / ' + num;
+            }
+
+            this.n = 0;
+            return this;  
+        }
+    }
+
+    pow(num) { 
+        if (typeof num === 'number'){
+            this.result = Math.pow(this.result, num);
+            this.str = '(' + this.str + ') ^ ' + num;
+            this.n = 0;
+            return this; 
+        }
+    }
+
+    sqrt() { 
+        this.result = Math.sqrt(this.result);
+        this.str = '√(' + this.str + ')';
+        this.n = 0;
+        return this;  
+    }
+
+    getResult() {
+        return this.result;
+    }
+
+    toString() {
+        return this.str + ' = ' + this.result;
+    }
 }
-const calc2 = new CalculatorExtended();
+
+
+const calc = new CalculatorExtended();
+calc.add(3).reset().sub(3).mul(2).div(3).pow(4).sqrt();
+//console.log(calc.add(1).reset().sub(3).mul(2).div(3).pow(4).sqrt());
+console.log(calc.toString());  // √(((0 - 3) * 2 / 3) ^ 4) = 4
+console.log(calc.reset().div(2).reset().mul(2).toString()); // 0 * 2 = 0
+console.log(calc.reset().div(2).mul(2).toString()); // 0 / 2 * 2 = 0
+console.log(calc.reset().sub(3).div(2).toString()); // (0 - 3) / 2 = -1.5
+console.log(calc.reset().sqrt().toString()); // √(0) = 0
+console.log(calc.reset().add(4).sqrt().toString()); // √(0 + 4) = 2
+console.log(calc.reset().add(4).mul(2).mul(2).toString()); // (0 + 4) * 2 * 2 = 16
+console.log(calc.reset().add(4).add(4).add(4).mul(2).add(4).add(4).add(4).mul(2).toString()); 
