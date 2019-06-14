@@ -7,12 +7,50 @@
     <title>HomeWork_lesson_5</title>
 
     
+    <style>
+        #random{
+            text-align: center;
+            padding-top: 30px;
+            min-width: 200px;
+            min-height: 50px;
+            display: none;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            background-color: #fff;
+            transform: translate(-50%, -50%);
+            border: 1px solid orange;
+            border-radius: 20px;
+        }
+        #close{
+            position: absolute;
+            top: 2px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 20px;
+        }
+        button{
+            border-radius: 20px;
+        }
+        
+    </style>
 </head>
 <body>
-    
-    
+    <button id="generate">Generate email</button>
+    <div id="random">
+        <button id="close">Close</button>
+    </div>
+
+    <div class="input">Validate email:<input type="text" id="validate"></div>
+
+
+    <div class="input">Check the format:<input type="text" id="check-field"></div>
+    <button id="check">Check</button>
+
+    <div id="check-box">
+        <button id="close-check">Close</button>
+    </div>
 
     <script src="index.js"></script>
-
 </body>
 </html>
