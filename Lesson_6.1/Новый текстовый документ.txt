@@ -1,3 +1,0 @@
-npm init это json подгружаем с Гит Баша
-
-npm i parcel --save-dev
