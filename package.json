@@ -1,0 +1,22 @@
+{
+  "name": "js_sandbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BogdanParshyn/js_sandbox.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BogdanParshyn/js_sandbox/issues"
+  },
+  "homepage": "https://github.com/BogdanParshyn/js_sandbox#readme"
+}
