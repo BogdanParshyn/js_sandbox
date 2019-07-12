@@ -1,0 +1,553 @@
+
+/* Log-In Page */
+.Log{
+position: relative;
+width: 375px;
+height: 667px;
+}
+
+
+/* Background Image */
+.BackgroundImage{
+position: absolute;
+width: 375px;
+height: 667px;
+left: 0px;
+top: 0px;
+
+background: url(00079101-1);
+filter: blur(8px);
+}
+
+/* Log-In Button */
+
+.LogInButton{ 
+position: absolute;
+left: -0.36px;
+right: 0.36px;
+top: 515px;
+bottom: 56px;
+}
+
+
+
+/* Don’t have an account? */
+.Dont {
+position: absolute;
+width: 250px;
+height: 24px;
+left: 65px;
+bottom: -2.02px;
+
+font-family: Montserrat;
+font-style: normal;
+font-weight: normal;
+font-size: 10px;
+line-height: 12px;
+display: flex;
+align-items: center;
+
+color: #FCFCFC;
+}
+
+
+/* Group */
+.Group1{
+position: absolute;
+width: 250px;
+height: 42px;
+left: 65px;
+top: 27px;
+}
+
+
+/* Rectangle 2 */
+.Rectangle2{
+position: absolute;
+height: 42px;
+left: 65px;
+right: 60px;
+bottom: 27px;
+
+background: #FF473A;
+mix-blend-mode: normal;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Log In */
+.LogIn{
+position: absolute;
+height: 18px;
+left: 80.5px;
+right: 71.5px;
+bottom: 39px;
+
+font-family: Montserrat;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 15px;
+text-align: center;
+
+color: #FFFFFF;
+}
+
+
+/* Log-In Fields */
+.LogInFields{
+position: absolute;
+height: 120px;
+left: -0.36px;
+right: 0.36px;
+bottom: 152px;
+}
+
+
+/* Forgot your password? */
+.Forgot{
+position: absolute;
+width: 250px;
+height: 24px;
+right: 60px;
+bottom: 0px;
+
+font-family: Montserrat;
+font-style: normal;
+font-weight: normal;
+font-size: 10px;
+line-height: 12px;
+display: flex;
+align-items: center;
+text-align: right;
+
+color: #FCFCFC;
+}
+
+
+/* Group */
+.Group2{
+position: absolute;
+width: 250px;
+height: 84px;
+left: 64.9px;
+top: 12px;
+}
+
+
+/* Rectangle 9 */
+.Rectangle9{
+position: absolute;
+left: 64.9px;
+right: 60.1px;
+top: 12px;
+bottom: 24px;
+
+background: #FFFFFF;
+}
+
+/* Email address */
+.Emailaddress{
+position: absolute;
+left: 79.9px;
+right: 72.1px;
+top: 26px;
+bottom: 76px;
+
+font-family: Montserrat;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 15px;
+
+color: #000000;
+}
+
+
+/* Password */
+.Password{
+position: absolute;
+left: 79.9px;
+right: 72.1px;
+top: 64px;
+bottom: 38px;
+
+font-family: Montserrat;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 15px;
+
+color: #000000;
+}
+
+
+/* Line 3 */
+.Line3{
+position: absolute;
+left: 64.9px;
+right: 60.1px;
+top: 54px;
+bottom: 66px;
+
+border: 1px solid #000000;
+transform: matrix(1, 0, 0, -1, 0, 0);
+}
+
+/* App Info */
+.AppInfo{
+position: absolute;
+left: 0px;
+right: 0px;
+top: 20px;
+bottom: 272px;
+}
+
+
+/* YOUR ART MUSEUM */
+.YOURARTMUSEUM{
+position: absolute;
+width: 220px;
+height: 150px;
+left: calc(50% - 220px/2 - 9.14px);
+top: calc(50% - 150px/2 + 69px);
+
+font-family: Montserrat;
+font-style: normal;
+font-weight: normal;
+font-size: 36px;
+line-height: 44px;
+
+color: #FCFCFC;
+}
+
+
+/* 151 3rd St San Francisco, CA 94103 */
+.StSan{
+position: absolute;
+width: 226px;
+height: 42px;
+left: calc(50% - 226px/2 - 5.14px);
+top: calc(50% - 42px/2 + 158px);
+
+font-family: Montserrat;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 15px;
+display: flex;
+align-items: center;
+
+color: #FCFCFC;
+}
+
+
+/* Status Bar */
+.StatusBar{
+position: absolute;
+height: 24px;
+left: 0px;
+right: 0px;
+top: 0px;
+}
+
+
+/* Frame 6 */
+.Frame6{
+position: absolute;
+width: 120px;
+height: 16px;
+left: 2.64px;
+top: 4px;
+}
+
+
+/* Group */
+.Group3{
+position: absolute;
+width: 12px;
+height: 9px;
+left: 81.36px;
+top: 3px;
+}
+
+
+/* Path */
+
+position: absolute;
+width: 12px;
+height: 3.41px;
+left: 81.36px;
+top: 3px;
+
+background: #FCFCFC;
+
+
+/* Path */
+
+position: absolute;
+width: 8.07px;
+height: 2.64px;
+left: 83.32px;
+top: 6px;
+
+background: #FCFCFC;
+
+
+/* Path */
+
+position: absolute;
+width: 4.09px;
+height: 3.04px;
+left: 85.31px;
+top: 8.96px;
+
+background: #FCFCFC;
+
+
+/* Group */
+
+position: absolute;
+width: 33.5px;
+height: 5.5px;
+left: 3.36px;
+top: 5px;
+
+
+
+/* Oval 1 */
+
+position: absolute;
+width: 5.5px;
+height: 5.5px;
+left: 3.36px;
+top: 5px;
+
+background: #FFFFFF;
+
+
+/* Oval 1 copy */
+
+position: absolute;
+width: 5.5px;
+height: 5.5px;
+left: 10.36px;
+top: 5px;
+
+background: #FFFFFF;
+
+
+/* Oval 1 copy 2 */
+
+position: absolute;
+width: 5.5px;
+height: 5.5px;
+left: 17.36px;
+top: 5px;
+
+background: #FFFFFF;
+
+
+/* Shape */
+
+position: absolute;
+width: 5.5px;
+height: 5.5px;
+left: 24.36px;
+top: 5px;
+
+background: #FFFFFF;
+
+
+/* Path */
+
+position: absolute;
+width: 4.5px;
+height: 4.5px;
+left: 24.86px;
+top: 5.5px;
+
+background: #DADADA;
+
+
+/* Path */
+
+position: absolute;
+width: 5.5px;
+height: 5.5px;
+left: 24.36px;
+top: 5px;
+
+background: #DADADA;
+
+
+/* Shape */
+
+position: absolute;
+width: 5.5px;
+height: 5.5px;
+left: 31.36px;
+top: 5px;
+
+background: #FFFFFF;
+
+
+/* Path */
+
+position: absolute;
+width: 4.5px;
+height: 4.5px;
+left: 31.86px;
+top: 5.5px;
+
+background: #DADADA;
+
+
+/* Path */
+
+position: absolute;
+width: 5.5px;
+height: 5.5px;
+left: 31.36px;
+top: 5px;
+
+background: #DADADA;
+
+
+/* Figma */
+
+position: absolute;
+width: 35px;
+height: 15px;
+left: 39.86px;
+top: 0.5px;
+
+font-family: Helvetica;
+font-size: 12px;
+line-height: 14px;
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+
+
+/* Frame 8 */
+
+position: absolute;
+width: 88px;
+height: 18px;
+right: 2.36px;
+top: 2px;
+
+
+
+/* Group */
+
+position: absolute;
+width: 24.5px;
+height: 10px;
+left: 59.86px;
+top: 4.5px;
+
+
+
+/* Shape */
+
+position: absolute;
+width: 22.5px;
+height: 10px;
+left: 59.86px;
+top: 4.5px;
+
+background: #FFFFFF;
+
+
+/* Path */
+
+position: absolute;
+width: 21.5px;
+height: 8.95px;
+left: 60.36px;
+top: 5.03px;
+
+background: #DADADA;
+
+
+/* Path */
+
+position: absolute;
+width: 22.5px;
+height: 10px;
+left: 59.86px;
+top: 4.5px;
+
+background: #DADADA;
+
+
+/* Charge */
+
+position: absolute;
+width: 9px;
+height: 8px;
+left: 60.86px;
+top: 5.5px;
+
+background: #FFFFFF;
+
+
+/* + */
+
+position: absolute;
+width: 1.5px;
+height: 3.46px;
+left: 82.86px;
+top: 8px;
+
+background: #FFFFFF;
+
+
+/* 42% */
+
+position: absolute;
+width: 25px;
+height: 15px;
+left: 29.86px;
+top: 2.5px;
+
+font-family: Helvetica;
+font-size: 12px;
+line-height: 14px;
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+
+
+/* Vector 3 */
+
+position: absolute;
+width: 5px;
+height: 10px;
+left: 19.86px;
+top: 4.5px;
+
+border: 1px solid #FCFCFC;
+
+
+/* 9:42 AM */
+
+position: absolute;
+width: 50px;
+height: 15px;
+left: calc(50% - 50px/2 + 1px);
+top: 4.5px;
+
+font-family: Helvetica;
+font-size: 12px;
+line-height: 14px;
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+

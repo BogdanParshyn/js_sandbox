@@ -1,0 +1,44 @@
+.body{
+    background: #000000;
+}
+/* Status Bar */
+.StatusBar{
+position: absolute;
+height: 24px;
+left: 0px;
+right: 0px;
+top: 0px;
+background: yellow;
+}
+
+/* App Info */
+
+.AppInfo{
+position: absolute;
+left: 0px;
+right: 0px;
+top: 20px;
+bottom: 272px;
+background: red;
+}
+
+/* Log-In Fields */
+.Log-InFields{
+position: absolute;
+height: 120px;
+left: -0.36px;
+right: 0.36px;
+bottom: 152px;
+background: green;
+}
+
+/* Log-In Button */
+
+.Log-InButton{
+position: absolute;
+left: -0.36px;
+right: 0.36px;
+top: 515px;
+bottom: 56px;
+background: black;
+}
