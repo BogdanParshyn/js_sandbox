@@ -26,4 +26,49 @@ waitForScroll() // вместо promise указываем функцию со �
         div.style.background = color;
       } 
   );
-   
+// ======================================================================================================================= //
+
+// Part 2:
+
+function waitForAnswer(){
+    return new Promise((resolve, reject) => {
+        window.addEventListener('keydown', (event) => {
+
+          if( (event.key).toUpperCase() === "Y" ) {
+            resolve();
+          } else if( (event.key).toUpperCase() === "N" ) {
+            reject();
+          } 
+
+        });
+    });
+}
+
+function setText(text) {
+      
+      const div = document.createElement("div"); // Создаем новый div.
+      div.id = "text"; // назначаем id
+      div.style = 'position: absolute; top: 20px; border: 4px double black'; // назначаем стили нашему div-у.
+      document.body.append(div); // добавляем наш div в HTML документ.
+      
+      document.getElementById("text").innerHTML = text; // назначаем нужный нам текст.
+      
+}
+
+setText("Вы сделали домашнее задание? Y / N"); // это первый наш вызов, после которыйй выводит вопрос на страничке, а второй раз 
+                                               // он уже вызывается с другим значением, которое прилетело после обработчика promise-а.
+
+waitForAnswer() // prompt("Вы сделали домашнее задание? Y / N", "Y or N")
+  .then(() => setText("Так держать!"))
+  .catch(() => setText("Нужно подтянуть("));
+  // ======================================================================================================================= //
+
+  // Part 3:
+
+  function waitForTime() {
+    return new Promise((resolve, reject) => {
+      window.addEventListener('scroll', resolve);
+  });
+  }
+
+  waitForTime();
