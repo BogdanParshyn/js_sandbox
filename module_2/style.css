@@ -6,7 +6,7 @@ body{
     background: linear-gradient(336.91deg, #F0F4FD -56.86%, #FFFFFF 126.39%);
 }
 
-/* РЎС‚РёР»Рё РґР»СЏ book */
+/* Стили для book */
 .EllipseLeftUp{
     position: absolute;
     left: -5.6%;
@@ -99,7 +99,7 @@ body{
     color: #FFFFFF;
 }
 
-/* РЎС‚РёР»Рё РґР»СЏ email and name - РѕР±С‰РёРµ */
+/* Стили для email and name - общие */
 
 .EllipseLeftUp23{
     position: absolute;
@@ -158,7 +158,7 @@ body{
     color: rgba(56, 79, 125, 0.8);
 }
 
-.EllipseRighteCenter{
+.EllipseRighteCenter23{
     position: absolute;
     left: 78.13%;
     right: 7.03%;

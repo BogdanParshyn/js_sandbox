@@ -1,0 +1,308 @@
+body{
+    position: absolute;
+    width: 375px;
+    height: 812px;
+
+    background: linear-gradient(336.91deg, #F0F4FD -56.86%, #FFFFFF 126.39%);
+}
+
+/* Стили для book */
+.EllipseLeftUp{
+    position: absolute;
+    left: -5.6%;
+    right: 85.6%;
+    top: 4.93%;
+    bottom: 85.84%;
+
+    background: linear-gradient(147.47deg, #FEB665 24.48%, #F66EB4 118.65%);
+    border-radius: 12px;
+}
+
+.EllipseRightUp{
+    position: absolute;
+    left: 71.2%;
+    right: 9.41%;
+    top: 20.42%;
+    bottom: 70.62%;
+
+    background: linear-gradient(228.76deg, #2DEEF9 -34.42%, #E084F1 127.18%);
+    transform: rotate(-15.82deg);
+}
+
+.EllipseCenter{
+    position: absolute;
+    width: 212px;
+    height: 212px;
+    left: 82px;
+    top: 197px;
+
+    background: linear-gradient(73.12deg, #25CED1 -19.51%, #34E6E9 58.02%, #6AFCFF 138%);
+}
+
+.ReadBooks{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 44px;
+    text-align: center;
+
+    color: #384F7D;
+}
+
+.CreateYourBook{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 60.59%;
+    bottom: 33.99%;
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    /* or 157% */
+
+    text-align: center;
+
+    color: rgba(56, 79, 125, 0.8);
+}
+
+.EllipseLeftDown{
+    position: absolute;
+    left: -22.17%;
+    right: 49.89%;
+    top: 91.31%;
+    bottom: -24.69%;
+
+    background: linear-gradient(228.76deg, rgba(45, 238, 249, 0.15) -34.42%, rgba(224, 132, 241, 0.15) 127.18%);
+    transform: rotate(-15.82deg);
+}
+
+.EllipseStart{
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: 164px;
+    top: 650px;
+
+    background: linear-gradient(125.58deg, #BAFB67 -5.37%, #00D23A 196.64%);
+    border-radius: 8px;
+
+    color: #FFFFFF;
+}
+
+/* Стили для email and name - общие */
+
+.EllipseLeftUp23{
+    position: absolute;
+    width: 299px;
+    height: 299px;
+    left: -57px;
+    top: -139px;
+
+    background: linear-gradient(315deg, rgba(255, 255, 255, 0.61) 3.5%, rgba(121, 171, 252, 0.61) 93.61%, rgba(96, 108, 255, 0.61) 147.83%);
+}
+
+.EllipseCenterUp23{
+    position: absolute;
+    left: 33.33%;
+    right: 30.4%;
+    top: 8.25%;
+    bottom: 75%;
+
+    background: linear-gradient(147.47deg, #FEB665 24.48%, #F66EB4 118.65%);
+    border-radius: 12px;
+}
+
+.Welcome{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 44px;
+    text-align: center;
+
+    color: #384F7D;
+}
+
+.CreateYour{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 34.48%;
+    bottom: 60.1%;
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    /* or 157% */
+
+    text-align: center;
+
+    color: rgba(56, 79, 125, 0.8);
+}
+
+.EllipseRighteCenter23{
+    position: absolute;
+    left: 78.13%;
+    right: 7.03%;
+    top: 43.62%;
+    bottom: 49.53%;
+
+    background: linear-gradient(228.76deg, #2DEEF9 -34.42%, #E084F1 127.18%);
+    transform: rotate(-15.82deg);
+}
+
+.nameType23{
+    position: absolute;
+    left: 0%;
+    right: -57.28%;
+    top: 0%;
+    bottom: -13.33%;
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height */
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: rgba(68, 89, 132, 0.3);
+}
+
+.country{
+    position: absolute;
+    left: 8%;
+    right: 48.27%;
+    top: 66.5%;
+    bottom: 31.4%;
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height */
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: rgba(68, 89, 132, 0.3);
+}
+
+.age{
+    position: absolute;
+    left: 52%;
+    right: 8%;
+    top: 69.21%;
+    bottom: 24.88%;
+
+    background: #FFFFFF;
+    box-shadow: 4px 12px 25px rgba(71, 55, 255, 0.08);
+    border-radius: 8px;
+}
+
+
+.regName-Type23{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+
+    background: #FFFFFF;
+    border-radius: 8px;
+}
+
+.regCountry2{
+    position: absolute;
+    left: 0%;
+    right: 52.38%;
+    top: 0%;
+    bottom: 0%;
+
+    background: #FFFFFF;
+    box-shadow: 4px 12px 25px rgba(71, 55, 255, 0.08);
+    border-radius: 8px;
+}
+
+.regAge2{
+    position: absolute;
+    left: 52%;
+    right: 8%;
+    top: 69.21%;
+    bottom: 24.88%;
+
+    background: #FFFFFF;
+    box-shadow: 4px 12px 25px rgba(71, 55, 255, 0.08);
+    border-radius: 8px;
+}
+
+.greenButton23{
+    position: absolute;
+    left: 0%;
+    right: 3.96%;
+    top: 0%;
+    bottom: 0%;
+
+    background: linear-gradient(166.04deg, #BAFB67 -5.37%, #00D23A 196.64%);
+    border-radius: 8px;
+}
+
+.nextStepSignUp{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: -17.65%;
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+.AlreadyHave{
+    position: absolute;
+    left: 6.08%;
+    right: 6.46%;
+    top: 0%;
+    bottom: -15.79%;
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #445984;
+
+}

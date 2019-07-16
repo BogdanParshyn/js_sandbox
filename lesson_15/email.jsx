@@ -11,30 +11,33 @@ export default class Email extends React.Component {
     
     }
 
-    onClick() {
-        this.state = { 
-            numberPage: 'stThree'// При вызове клика передаем другое значение в номер старинчки
-        }
+    onClick() { // Нажимаем на NEXT STEP - отправляем запрос и если все ок переходим на другую страничку.
+        fetch('https://authserver.worldthirteen.now.sh/check_username?username=something', )
     }
 
 
     render() {
         return(
-            <div className="Book">
-                <div className="EllipseLeftUp" />
-                <div className="EllipseRightUp" />
-                <div className="EllipseCenter" />
-                <div className="ReadBooks">Read Books</div>
-                <div className="CreateYourBook">
+            <div className="Email">
+                <div className="EllipseLeftUp23" />
+                <div className="EllipseCenterUp23" />
+                <div className="Welcome">Welcome!</div>
+                <div className="CreateYour">
                     Create your account to get started. After that, 
-                    you can share books and make friends
+                    you can share books and make friends. */
                 </div>
+                <div className="EllipseRighteCenter23"></div>
 
-                <div className="EllipseStart">
-                    <button onClick={this.onClick.bind(this)}>Go Next</button>
-                </div>
+                <div className="nameType23">NAME</div>
+                <div className="regName-Type23">input name</div>
 
-                <div className="EllipseLeftDown" />
+
+
+                country
+
+                age
+
+                <div className="EllipseLeftDown" /><button onClick={this.onClick.bind(this)}>Go Next</button>
             </div>        
                 
 
