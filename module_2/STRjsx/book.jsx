@@ -1,19 +1,19 @@
 import React from 'react';
 import "./style.css"
 
-export default class Email extends React.Component {  
+export default class Book extends React.Component {  
     constructor(props) { 
         super(props)
     
         this.state = { // Метод.
-            numberPage: 'stTwo'// Значение 2-й странички.
+            numberPage: 'stOne'// Стартовая страница приветсвия с которой и начинаем.
         }
     
     }
 
     onClick() {
         this.state = { 
-            numberPage: 'stThree'// При вызове клика передаем другое значение в номер старинчки
+            numberPage: 'stTwo'// При вызове клика передаем другое значение в номер старинчки
         }
     }
 

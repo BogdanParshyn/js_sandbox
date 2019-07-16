@@ -1,16 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Book 
-import Name
-import Email
-import Loading
-import Welcome
-import Fail
-
-
-
-
-
+import Book from './STRjsx/book';
+import Name from './STRjsx/name';
+import Email from './STRjsx/email';
+import Loading from './STRjsx/loading';
+import Welcome from './STRjsx/welcome';
+import Fail from './STRjsx/fail';
 
 class SS extends React.Component {
     constructor(props) { 
