@@ -65,10 +65,10 @@ waitForAnswer() // prompt("Вы сделали домашнее задание? 
 
   // Part 3:
 
-  function waitForTime() {
+  function waitForTime(seconds) {
     return new Promise((resolve, reject) => {
       window.addEventListener('scroll', resolve);
   });
   }
 
-  waitForTime();
+    waitForTime(seconds);
